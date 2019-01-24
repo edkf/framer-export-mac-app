@@ -1,0 +1,26 @@
+{
+  "name": "framer-export-mac-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "webpack --watch",
+    "electron": "electron main.js",
+    "build": "webpack && electron-packager ./",
+    "preview": "electron main.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync-webpack-plugin": "^2.2.2",
+    "coffee-loader": "^0.9.0",
+    "coffeescript": "^2.3.2",
+    "electron": "^4.0.2",
+    "electron-packager": "^13.0.1",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.29.0",
+    "webpack-cli": "^3.2.1"
+  }
+}

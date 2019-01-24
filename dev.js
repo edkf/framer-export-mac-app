@@ -8,6 +8,11 @@ function createWindow () {
   mainWindow = new BrowserWindow({width: 375, height: 812})
   mainWindow.loadURL(`http://localhost:3000/`)
 
+  // WIP
+  setTimeout(function () {
+    mainWindow.reload()
+  }, 3000)
+
   mainWindow.on('closed', function () {
     mainWindow = null
   })

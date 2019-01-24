@@ -1,4 +1,4 @@
 layerA = new Layer
-  backgroundColor: 'black'
+  backgroundColor: 'blue'
   size: Screen.size
   label: 'Hello, world! 👋'

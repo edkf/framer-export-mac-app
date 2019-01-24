@@ -9,10 +9,10 @@ const coffee = {
 
 module.exports = {
   mode: 'production',
-  entry: './framer/app.coffee',
+  entry: './app.coffee',
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, './dist'),
+    path: path.resolve(__dirname, '../dist'),
   },
   module: {
     rules: [
@@ -24,7 +24,7 @@ module.exports = {
       host: 'localhost',
       port: 3000,
       open: false,
-      server: { baseDir: ['./'] }
+      server: { baseDir: [path.resolve(__dirname, '../')] }
     })
   ]
 }

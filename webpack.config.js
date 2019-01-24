@@ -8,11 +8,11 @@ const coffee = {
 }
 
 module.exports = {
-  mode: 'development', // none, development, production
-  entry: './framer/app.coffee', // Entry file
+  mode: 'production',
+  entry: './framer/app.coffee',
   output: {
-    filename: 'bundle.js', // Genetated file
-    path: path.resolve(__dirname, './dist'), // Generated file folder,
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, './dist'),
   },
   module: {
     rules: [
@@ -21,8 +21,6 @@ module.exports = {
   },
   plugins: [
     new BrowserSyncPlugin({
-      // browse to http://localhost:3000/ during development,
-      // ./public directory is being served
       host: 'localhost',
       port: 3000,
       server: { baseDir: ['./'] }

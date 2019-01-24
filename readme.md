@@ -14,13 +14,8 @@ npm install
  ```
 
 ## Creating a prototype
- ```bash
- npm run start
- ```
+ `npm run start` and write your code on **app.coffee**
 
 ## Generate a mac app
 
- ```bash
- npm run build
- ```
- the file will be in **framer-export-mac-app-darwin-x64 folder**
+ run `npm run build` and the file will be placed in **framer-export-mac-app-darwin-x64** folder

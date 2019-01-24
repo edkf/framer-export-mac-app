@@ -5,9 +5,9 @@
   "main": "main.js",
   "scripts": {
     "webpack": "webpack --watch",
-    "electron": "electron dev.js",
-    "watch": "concurrently --kill-others \"npm run electron\" \"npm run webpack\"",
-    "build": "webpack && electron-packager ./"
+    "electron": "electron main.js",
+    "watch": "cross-env URL=\"dev\" concurrently --kill-others \"npm run webpack\" \"npm run electron\"",
+    "build": "cross-env URL=\"prod\" webpack && electron-packager ./"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +20,7 @@
     "browser-sync-webpack-plugin": "^2.2.2",
     "coffee-loader": "^0.9.0",
     "coffeescript": "^2.3.2",
+    "cross-env": "^5.2.0",
     "electron": "^4.0.2",
     "electron-packager": "^13.0.1",
     "html-webpack-plugin": "^3.2.0",

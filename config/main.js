@@ -1,12 +1,14 @@
 const electron = require('electron')
+const config = require('../prototype.config.js')
+
 const app = electron.app
 const BrowserWindow = electron.BrowserWindow
 
 let mainWindow
 
 function createWindow () {
-  mainWindow = new BrowserWindow({width: 375, height: 812})
-  mainWindow.loadURL(process.env.URL === 'dev' ? `http://localhost:3000/` : `file://${__dirname}/index.html`)
+  mainWindow = new BrowserWindow({width: config.dimensions.width, height: config.dimensions.height})
+  mainWindow.loadURL(process.env.URL === 'dev' ? config.dev_url : config.build_url)
 
 
   if (process.env.URL === 'dev') {
@@ -14,8 +16,6 @@ function createWindow () {
       mainWindow.reload()
     }, 3000)
   }
-
-
 
   mainWindow.on('closed', function () {
     mainWindow = null

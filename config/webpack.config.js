@@ -1,6 +1,7 @@
 const path = require('path')
 const webpack = require('webpack')
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
+const config = require('../prototype.config.js')
 
 const coffee = {
   test: /\.coffee$/,
@@ -12,7 +13,7 @@ module.exports = {
   entry: './app.coffee',
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, '../dist'),
+    path: config.dist_path,
   },
   module: {
     rules: [

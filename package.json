@@ -6,7 +6,7 @@
   "scripts": {
     "webpack": "webpack --config ./config/webpack.config.js --watch",
     "electron": "electron ./config/main.js",
-    "watch": "cross-env URL=\"dev\" concurrently --kill-others \"npm run webpack\" \"npm run electron\"",
+    "start": "cross-env URL=\"dev\" concurrently --kill-others \"npm run webpack\" \"npm run electron\"",
     "build": "rm -rf dist && cross-env URL=\"prod\" webpack --config ./config/webpack.config.js && electron-packager ./"
   },
   "keywords": [],

@@ -10,7 +10,7 @@ function createWindow () {
   mainWindow = new BrowserWindow({width: config.dimensions.width, height: config.dimensions.height})
   mainWindow.loadURL(process.env.URL === 'dev' ? config.dev_url : config.build_url)
 
-
+  // WIP
   if (process.env.URL === 'dev') {
     setTimeout(function () {
       mainWindow.reload()

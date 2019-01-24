@@ -6,7 +6,7 @@ let mainWindow
 
 function createWindow () {
   mainWindow = new BrowserWindow({width: 375, height: 812})
-  mainWindow.loadURL(`file://${__dirname}/index.html`)
+  mainWindow.loadURL(`http://localhost:3000/`)
 
   mainWindow.on('closed', function () {
     mainWindow = null

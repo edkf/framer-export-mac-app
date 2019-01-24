@@ -4,15 +4,17 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "start": "webpack --watch",
-    "electron": "webpack && electron main.js",
-    "build": "webpack && electron-packager ./",
-    "preview": "webpack && electron main.js"
+    "webpack": "webpack --watch",
+    "electron": "electron dev.js",
+    "watch": "concurrently --kill-others \"npm run electron\" \"npm run webpack\"",
+    "build": "webpack && electron-packager ./"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "concurrently": "^4.1.0"
+  },
   "devDependencies": {
     "browser-sync-webpack-plugin": "^2.2.2",
     "coffee-loader": "^0.9.0",
